@@ -1,0 +1,15 @@
+{
+  "name": "accounting-ai-assistant",
+  "version": "1.0.0",
+  "description": "AI accounting assistant for Netlify",
+  "scripts": {
+    "dev": "netlify dev",
+    "build": "echo 'No build step required'"
+  },
+  "dependencies": {
+    "openai": "^4.20.1"
+  },
+  "devDependencies": {
+    "netlify-cli": "^16.0.0"
+  }
+}

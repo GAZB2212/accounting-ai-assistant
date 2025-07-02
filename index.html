@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premier Accounting Services - AI Assistant</title>
-    <meta name="description" content="24/7 AI-powered accounting support for all your VAT, tax, and business questions">
+    <title>TJB Business Services - AI Assistant</title>
+    <meta name="description" content="24/7 AI-powered business support for all your accounting, bookkeeping, and administration questions">
     <style>
         * {
             margin: 0;
@@ -14,7 +14,7 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #2c5aa0 0%, #1e3a8a 100%);
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -35,7 +35,7 @@
         }
 
         .header {
-            background: linear-gradient(135deg, #2c3e50, #3498db);
+            background: linear-gradient(135deg, #1e3a8a, #2563eb);
             color: white;
             padding: 25px;
             text-align: center;
@@ -59,7 +59,7 @@
             width: 12px;
             height: 12px;
             border-radius: 50%;
-            background: #27ae60;
+            background: #10b981;
             animation: pulse 2s infinite;
         }
 
@@ -107,7 +107,7 @@
         }
 
         .user-message .message-bubble {
-            background: #3498db;
+            background: #2563eb;
             color: white;
             border-bottom-right-radius: 5px;
         }
@@ -117,7 +117,7 @@
             color: #333;
             border-bottom-left-radius: 5px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            border-left: 4px solid #3498db;
+            border-left: 4px solid #2563eb;
         }
 
         .message-time {
@@ -139,7 +139,7 @@
             border-radius: 18px;
             border-bottom-left-radius: 5px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            border-left: 4px solid #3498db;
+            border-left: 4px solid #2563eb;
         }
 
         .typing-dots {
@@ -190,11 +190,11 @@
         }
 
         .chat-input textarea:focus {
-            border-color: #3498db;
+            border-color: #2563eb;
         }
 
         .send-btn {
-            background: #3498db;
+            background: #2563eb;
             color: white;
             border: none;
             padding: 15px 25px;
@@ -207,7 +207,7 @@
         }
 
         .send-btn:hover:not(:disabled) {
-            background: #2980b9;
+            background: #1d4ed8;
             transform: translateY(-1px);
         }
 
@@ -225,24 +225,25 @@
         }
 
         .quick-btn {
-            background: #ecf0f1;
+            background: #f1f5f9;
             border: none;
             padding: 8px 15px;
             border-radius: 20px;
             cursor: pointer;
             font-size: 14px;
             transition: all 0.3s;
-            color: #555;
+            color: #475569;
+            border: 1px solid #e2e8f0;
         }
 
         .quick-btn:hover {
-            background: #3498db;
+            background: #2563eb;
             color: white;
             transform: translateY(-1px);
         }
 
         .error-message {
-            background: #e74c3c;
+            background: #ef4444;
             color: white;
             padding: 10px 15px;
             border-radius: 8px;
@@ -252,23 +253,29 @@
 
         .welcome-message {
             text-align: center;
-            color: #666;
-            font-style: italic;
+            color: #64748b;
             margin: 20px 0;
-            padding: 20px;
+            padding: 25px;
             background: white;
             border-radius: 15px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
+        }
+
+        .welcome-message h3 {
+            color: #1e293b;
+            margin-bottom: 10px;
         }
 
         .connection-status {
-            background: #d4edda;
-            color: #155724;
+            background: #dcfce7;
+            color: #166534;
             padding: 10px 15px;
             border-radius: 8px;
             margin: 10px 0;
             font-size: 14px;
             text-align: center;
+            border: 1px solid #bbf7d0;
         }
 
         @media (max-width: 768px) {
@@ -297,15 +304,15 @@
     <div class="chat-container">
         <div class="header">
             <div class="status-indicator" title="AI Assistant Online"></div>
-            <h1>Premier Accounting Services</h1>
-            <p>AI-Powered Client Support • Available 24/7</p>
+            <h1>TJB Business Services</h1>
+            <p>Supporting you in growing your business • Available 24/7</p>
         </div>
 
         <div class="chat-messages" id="chatMessages">
             <div class="welcome-message">
-                <h3>👋 Welcome to our AI Assistant!</h3>
-                <p>I'm here to help with your accounting questions 24/7. I can assist with VAT, tax deadlines, business expenses, and general accounting guidance.</p>
-                <p><strong>Try asking about:</strong> VAT deadlines, business expenses, our services, tax returns, or any accounting question.</p>
+                <h3>👋 Welcome to TJB Business Services AI Assistant!</h3>
+                <p>I'm here to help with your business administration, bookkeeping, and accounting questions 24/7. I can assist with VAT returns, CIS queries, bookkeeping processes, and general business administration.</p>
+                <p><strong>Try asking about:</strong> VAT deadlines, bookkeeping services, CIS returns, receipt management, or any business admin question.</p>
             </div>
         </div>
 
@@ -320,14 +327,14 @@
         <div class="chat-input">
             <div class="quick-actions">
                 <button class="quick-btn" onclick="sendQuickMessage('When is my VAT return due?')">VAT Deadlines</button>
-                <button class="quick-btn" onclick="sendQuickMessage('What can I claim as business expenses?')">Business Expenses</button>
-                <button class="quick-btn" onclick="sendQuickMessage('How much do your services cost?')">Service Pricing</button>
-                <button class="quick-btn" onclick="sendQuickMessage('I need help with my tax return')">Tax Returns</button>
+                <button class="quick-btn" onclick="sendQuickMessage('How does your bookkeeping service work?')">Bookkeeping Services</button>
+                <button class="quick-btn" onclick="sendQuickMessage('What is CIS and do I need it?')">CIS Returns</button>
+                <button class="quick-btn" onclick="sendQuickMessage('How can you help with my business admin?')">Business Admin</button>
             </div>
             <div class="input-container">
                 <textarea 
                     id="messageInput" 
-                    placeholder="Ask me anything about accounting, tax, VAT, or our services..."
+                    placeholder="Ask me anything about bookkeeping, VAT, CIS, or business administration..."
                     rows="1"
                 ></textarea>
                 <button class="send-btn" id="sendBtn">Send</button>
@@ -353,7 +360,7 @@
             const messagesContainer = document.getElementById('chatMessages');
             const statusDiv = document.createElement('div');
             statusDiv.className = 'connection-status';
-            statusDiv.textContent = '✅ Connected to AI Assistant - Ready to help!';
+            statusDiv.textContent = '✅ Connected to TJB AI Assistant - Ready to help!';
             messagesContainer.appendChild(statusDiv);
         }
 
@@ -445,9 +452,9 @@
                 hideTyping();
                 console.error('Chat error:', error);
                 if (error.message.includes('quota') || error.message.includes('billing')) {
-                    showError('The AI service is temporarily unavailable. Please contact us directly at 01234 567890.');
+                    showError('The AI service is temporarily unavailable. Please contact TJB Business Services directly.');
                 } else {
-                    showError('Sorry, I encountered an error. Please try again or contact us at 01234 567890.');
+                    showError('Sorry, I encountered an error. Please try again or contact TJB Business Services directly.');
                 }
             } finally {
                 isProcessing = false;
